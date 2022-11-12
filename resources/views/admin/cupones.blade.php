@@ -51,33 +51,6 @@
                                 name="descuento" value="{{ old('descuento') }}">
                         </div>
                     </div>
-                    <div class="itm">
-                        <div class="itm__datos label">
-                            <label>Número de usos</label>
-                        </div>
-                        <div class="itm__datos">
-                            <input type="number" min="0" id="usos" class="form-input"
-                                name="usos" value="{{ old('usos') }}">
-                        </div>
-                    </div>
-                    <div class="itm">
-                        <div class="itm__datos label">
-                            <label for="nombre">Fecha de vencimiento</label>
-                        </div>
-                        <div class="itm__datos">
-                            <input type="date" id="fecha-vencimiento" class="form-input"
-                                name="fecha-vencimiento" value="{{ old('fecha-vencimiento') }}">
-                        </div>
-                    </div>
-                    <div class="itm">
-                        <div class="itm__datos label">
-                            <label for="nombre">Hora de vencimiento</label>
-                        </div>
-                        <div class="itm__datos">
-                            <input type="time" id="hora-vencimiento" class="form-input"
-                                name="hora-vencimiento" value="{{ old('hora-vencimiento') }}">
-                        </div>
-                    </div>
                     <div class="contenedor-btn">
                         <input type="submit" name="agregar" id="agregar" class="agg-btn" value="Agregar">
                     </div>
@@ -89,10 +62,6 @@
                         <tr>
                             <th>Nombre</th>
                             <th>Descuento</th>
-                            <th>Número de usos</th>
-                            <th>Veces usado</th>
-                            <th>Fecha Vencimiento</th>
-                            <th>Hora Vencimiento</th>
                             <th>Modificar</th>
                             <th>Eliminar</th>
                         </tr>
@@ -101,14 +70,8 @@
                         <tr>
                             <td id="data-nombre"> {{ $cuponIndice->nombre }}</td>
                             <td id="data-descuento"> {{ $cuponIndice->descuento }}</td>
-                            <td id="data-usos"> {{ $cuponIndice->usos }}</td>
-                            <td></td>
-                            <td id="data-fecha"> {{ $cuponIndice->fecha_vencimiento }}</td>
-                            <td id="data-hora"> {{ $cuponIndice->hora_vencimiento }}</td>
                             <td><a class="btn-modificar" data-id="{{ $cuponIndice->id }}"
                                     data-nombre="{{ $cuponIndice->nombre }}" data-descuento="{{ $cuponIndice->descuento }}"
-                                    data-usos="{{ $cuponIndice->usos }}" data-fecha="{{ $cuponIndice->fecha_vencimiento }}"
-                                    data-hora="{{ $cuponIndice->hora_vencimiento }}"
                                     href=""><i class="fas fa-edit"></i></a></td>
                             <td>
                                 <form action="{{ route('cupones.destroy', $cuponIndice) }}" method="POST">
@@ -119,7 +82,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="8">No se encontraron resultados</td>
+                            <td colspan="4">No se encontraron resultados</td>
                         </tr>
                     @endforelse
                 </table>
@@ -157,30 +120,6 @@
                     </div>
                     <div class="itm__datos">
                         <input type="text" id="nuevo-descuento" class="form-input" name="nuevo-descuento">
-                    </div>
-                </div>
-                <div class="itm">
-                    <div class="itm__datos label">
-                        <label>Número de usos</label>
-                    </div>
-                    <div class="itm__datos">
-                        <input type="number" id="nuevo-usos" class="form-input" name="nuevo-usos">
-                    </div>
-                </div>
-                <div class="itm">
-                    <div class="itm__datos label">
-                        <label>Fecha de vencimiento</label>
-                    </div>
-                    <div class="itm__datos">
-                        <input type="date" id="nueva-fecha" class="form-input" name="nueva-fecha">
-                    </div>
-                </div>
-                <div class="itm">
-                    <div class="itm__datos label">
-                        <label>Hora de vencimiento</label>
-                    </div>
-                    <div class="itm__datos">
-                        <input type="time" id="nueva-hora" class="form-input" name="nueva-hora">
                     </div>
                 </div>
                 <input type="hidden" name="nueva-descripcion" id="nueva-descripcion">

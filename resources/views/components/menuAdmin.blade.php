@@ -1,10 +1,10 @@
 <nav>
     <ul class="menuAdmin">
-         <li class="block">
+        {{-- <li class="block">
             <input type="checkbox" name="item" id="item1" />
         <a href="{{ route('homeadmin') }}" class="principal"><i class="fas fa-home"></i>HOME</a>
 
-        </li> 
+        </li> --}}
         <li class="block">
             <input type="checkbox" name="item" id="item2" />
             <label for="item2" class="principal"><i class="fas fa-tshirt"></i> Productos</label>
@@ -26,15 +26,15 @@
                 <li><a href="{{ route('colecciones.index') }}" class="secundario"><i class="fas fa-plus"></i>Colección</a></li>
             </ul>
         </li>
-        <li class="block">
+        {{-- <li class="block">
             <input type="checkbox" name="item" id="item4" />
             <a href="{{ route('cupones.index') }}" class="principal"><i class="fas fa-tag"></i>Cupones</a>
-        </li> 
+        </li> --}}
         <li class="block">
             <input type="checkbox" name="item" id="item5" />
             <a href="{{ route('slider.index') }}" class="principal"><i class="fas fa-images"></i>Slider</a>
         </li>
-        <li class="block">
+        {{-- <li class="block">
             <input type="checkbox" name="item" id="item6" />
             <a href="{{ route('masvendidos') }}" class="principal"><i class="fas fa-fire"></i>Más vendidos</a>
         </li>
@@ -49,7 +49,7 @@
         <li class="block">
             <input type="checkbox" name="item" id="item8" />
             <a href="{{ route('envios.index') }}" class="principal"><i class="fas fa-truck"></i>Costo envíos</a>
-        </li> 
+        </li> --}}
 
 
     </ul>

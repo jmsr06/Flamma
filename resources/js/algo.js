@@ -85,9 +85,6 @@ if (document.baseURI.includes("/admin/cupones")) {
             e.preventDefault();
             document.getElementById('nuevo-nombre').value = e.target.parentElement.getAttribute('data-nombre');
             document.getElementById('nuevo-descuento').value = e.target.parentElement.getAttribute('data-descuento');
-            document.getElementById('nuevo-usos').value = e.target.parentElement.getAttribute('data-usos');
-            document.getElementById('nueva-fecha').value = e.target.parentElement.getAttribute('data-fecha');
-            document.getElementById('nueva-hora').value = e.target.parentElement.getAttribute('data-hora');
             document.getElementById('id').value = e.target.parentElement.getAttribute('data-id');
             contenedor.classList.add('open-modifica');
 

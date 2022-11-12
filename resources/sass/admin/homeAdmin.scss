@@ -1,0 +1,71 @@
+//fonts
+@import '../fuentes';
+//variables
+@import '../variables';
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: $body;
+}
+
+.contenedor {
+    grid-area: contenido;
+    background: $body;
+    text-align: center;
+}
+
+.p-contador {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    font-weight: 900;
+    text-align: center;
+    justify-content: center;
+}
+
+.p-grafica {
+    margin-top: 5rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: center;
+    justify-content: center;
+}
+
+.contenedor-contador {
+    margin-top: 1rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.contador {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.grafico {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin: 0 auto;
+    h3 {
+        text-align: center;
+        width: auto;
+        margin-bottom: 2rem;
+    }
+}
+
+.contenedor {
+    grid-area: contenido;
+}
+
+@media (min-width: 992px) {
+    .grafico {
+        width: 70%;
+    }
+}
