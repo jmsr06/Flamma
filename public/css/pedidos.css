@@ -1,0 +1,348 @@
+/*gothiceregular*/
+
+@font-face {
+  font-family: "gothiceregular";
+  src: url("/storage/font/gothice_-webfont.woff2") format("woff2"), url("/storage/font/gothice_-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*SpaceMono*/
+
+@font-face {
+  font-family: "SpaceMono";
+  src: url("/storage/font/Space_Mono/SpaceMono-Regular.woff") format("woff"), url("/storage/font/Space_Mono/SpaceMono-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SpaceMono";
+  src: url("/storage/font/Space_Mono/SpaceMono-Italic.woff") format("woff"), url("/storage/font/Space_Mono/SpaceMono-Italic.ttf") format("ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SpaceMono";
+  src: url("/storage/font/Space_Mono/SpaceMono-Bold.woff") format("woff"), url("/storage/font/Space_Mono/SpaceMono-Italic.ttf") format("ttf");
+  font-weight: 300;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "SpaceMono";
+  src: url("/storage/font/Space_Mono/SpaceMono-Bold.woff") format("woff"), url("/storage/font/Space_Mono/SpaceMono-Italic.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SpaceMono";
+  src: url("/storage/font/Space_Mono/SpaceMono-BoldItalic.woff") format("woff"), url("/storage/font/Space_Mono/SpaceMono-Italic.ttf") format("ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/*ModernSans*/
+
+@font-face {
+  font-family: "ModernSans";
+  src: url("/storage/font/modern_sans/ModernSans-Light.woff") format("woff"), url("/storage/font/modern_sans/ModernSans-Light.otf") format("otf"), url("/storage/font/modern_sans/ModernSans-Light.woff2") format("woff2");
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #eeeeee;
+}
+
+h1 {
+  font-family: "gothiceregular";
+  color: black;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 2rem;
+}
+
+.contenedor {
+  grid-area: contenido;
+  background: #eeeeee;
+  text-align: center;
+}
+
+.contenedor-tabla {
+  width: 95%;
+  height: 500px;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.tabla-fecha {
+  position: relative;
+  margin: auto;
+  width: 70%;
+  background-color: white;
+  border: 1px solid #ff7b00;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  border-radius: 15px;
+}
+
+.itm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.itm__datos {
+  text-align: center;
+}
+
+.itm__datos img {
+  width: 55%;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.label {
+  font-weight: bold;
+  width: 35%;
+  text-align: start;
+  margin-left: 0.5rem;
+}
+
+.span {
+  width: 35%;
+  text-align: start;
+}
+
+.contenedor-btn {
+  display: flex;
+  margin: auto;
+  width: 100%;
+  justify-content: center;
+}
+
+.buscar-btn {
+  background: black;
+  width: 40%;
+  font-size: 0.9rem;
+  height: 30px;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 9px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  outline: none;
+}
+
+.buscar-btn:hover {
+  background: #312f2f;
+  box-shadow: 1px 1px 5px #353131;
+}
+
+.contenedor-tabla-visualizar {
+  overflow: auto;
+  max-height: 250px;
+  margin-bottom: 3rem;
+}
+
+.tabla-visualizar {
+  background-color: white;
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  min-width: 300px;
+}
+
+.tabla-visualizar i {
+  font-size: 1.2rem;
+  color: black;
+  outline: none;
+}
+
+.tabla-visualizar th,
+td {
+  padding: 15px;
+  width: 20%;
+  text-align: center;
+}
+
+.tabla-visualizar thead {
+  background-color: #f5a237;
+  border-bottom: 3px solid #111111;
+  text-align: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.tabla-visualizar tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.tabla-visualizar tr:hover td {
+  background-color: #f8b762;
+}
+
+.contenedor-tabla-more {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  overflow-y: auto;
+}
+
+.tabla-more {
+  background-color: white;
+  border-collapse: collapse;
+  width: 30%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  min-width: 300px;
+  height: 440px;
+  max-height: 600px;
+  align-content: center;
+}
+
+.cerrar {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.2rem 0.3rem;
+  font-size: 1.2rem;
+  width: 100%;
+  height: 45px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.cerrar .cerrar__item {
+  width: 40px;
+  height: 100%;
+  line-height: 40px !important;
+  text-align: center;
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+}
+
+.cerrar__item:hover {
+  cursor: pointer;
+  background-color: #312f2f;
+}
+
+.tabla-main {
+  height: 90%;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+}
+
+.titulo {
+  margin-bottom: 2rem;
+  font-weight: 900;
+  font-size: 1.3rem;
+  text-align: center !important;
+}
+
+h3 {
+  margin-bottom: 1rem;
+}
+
+input {
+  width: 90%;
+  border: 1px solid #ff7b00;
+  border-radius: 5px;
+  height: 1.2rem;
+  padding: 0.1rem;
+}
+
+input:focus {
+  border: 1px solid #ffb14b;
+  outline: none;
+}
+
+.open-more {
+  transform: translateX(0) !important;
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .buscar-btn {
+    width: 30%;
+  }
+
+  .titulo {
+    font-size: 1.1rem;
+  }
+
+  .tabla-fecha {
+    width: 40%;
+  }
+
+  .tabla-visualizar {
+    width: 70%;
+  }
+
+  .tabla-more {
+    width: 50%;
+    font-size: 0.8rem;
+    height: 500px;
+    max-height: 600px;
+  }
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .tabla-fecha {
+    width: 25%;
+  }
+
+  .tabla-input {
+    width: 91%;
+  }
+
+  .itm {
+    margin-bottom: 1.5rem;
+  }
+
+  .tabla-visualizar {
+    width: 45%;
+  }
+
+  .tabla-more {
+    width: 30%;
+    font-size: 0.8rem;
+    max-height: 600px;
+  }
+}
+
